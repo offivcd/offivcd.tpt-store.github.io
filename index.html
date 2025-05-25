@@ -49,3 +49,71 @@
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LVALG – Update Logs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition duration-300">
+
+  <!-- Header -->
+  <header class="bg-purple-700 dark:bg-purple-800 text-white p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">LVALG – Update Logs</h1>
+    <button onclick="toggleDarkMode()" class="bg-white text-purple-700 dark:bg-gray-800 dark:text-white px-4 py-2 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+      Toggle Dark Mode
+    </button>
+  </header>
+
+  <!-- Update Logs Section -->
+  <main class="max-w-4xl mx-auto p-6 space-y-6">
+    <div class="border-l-4 border-purple-600 pl-4">
+      <h2 class="text-xl font-semibold">v1.2 – May 25, 2025</h2>
+      <ul class="list-disc list-inside ml-4">
+        <li>Added new dark mode feature to all pages</li>
+        <li>Redesigned About Me section for better clarity</li>
+        <li>Optimized mobile layout</li>
+      </ul>
+    </div>
+
+    <div class="border-l-4 border-purple-600 pl-4">
+      <h2 class="text-xl font-semibold">v1.1 – May 18, 2025</h2>
+      <ul class="list-disc list-inside ml-4">
+        <li>Added Update Logs page</li>
+        <li>Improved header logo alignment</li>
+        <li>Minor text corrections</li>
+      </ul>
+    </div>
+
+    <div class="border-l-4 border-purple-600 pl-4">
+      <h2 class="text-xl font-semibold">v1.0 – May 10, 2025</h2>
+      <ul class="list-disc list-inside ml-4">
+        <li>Initial release of LVALG landing page</li>
+        <li>Added About Me section and TPT store link</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 dark:bg-purple-800 text-white text-center p-4 mt-10">
+    <p>&copy; 2025 LVALG. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
